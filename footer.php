@@ -11,7 +11,7 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer container">
+	<footer id="colophon" class="site-footer container ">
 		<div class="row">
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'technian' ) ); ?>">
