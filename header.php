@@ -25,25 +25,18 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'technian' ); ?></a>
 
-	<header id="masthead" class="site-header container">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$technian_description = get_bloginfo( 'description', 'display' );
-			if ( $technian_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $technian_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+	<header id="masthead" class="site-header">
+		<button
+			id="navToggle"
+			aria-label="menu toggle"
+			aria-haspopup="true"
+			aria-expanded="false"
+			aria-controls="navMenu"
+			tabindex="0"
+			class="header-button">
+				<div class="logo">Technian</div>
+				<svg viewBox="0 0 24 11" class="styles__Burger"><g fill="currentColor" stroke="currentColor"><path d="M0,16 L24,16 L24,17 L0,17 L0,16 Z"></path><path d="M0,0 L24,0 L24,1 L0,1 L0,0 Z"></path><path d="M0,8 L24,8 L24,9 L0,9 L0,8 Z"></path></g></svg>
+		</button>
 
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'technian' ); ?></button>
@@ -57,3 +50,4 @@
 			?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
+	<div class="contents">
