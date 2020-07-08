@@ -38,8 +38,7 @@
 				<svg viewBox="0 0 24 11" class="styles__Burger"><g fill="currentColor" stroke="currentColor"><path d="M0,16 L24,16 L24,17 L0,17 L0,16 Z"></path><path d="M0,0 L24,0 L24,1 L0,1 L0,0 Z"></path><path d="M0,8 L24,8 L24,9 L0,9 L0,8 Z"></path></g></svg>
 		</button>
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'technian' ); ?></button>
+		<nav id="site-navigation" class="main-navigation styles__Nav">
 			<?php
 			wp_nav_menu(
 				array(
