@@ -57,11 +57,12 @@
     "build:all": "npm run build:css && npm run build:js && npm run build:images",
     "watch:css": "onchange 'static/src/scss/*.scss' -- npm run build:css",
     "watch:js": "onchange 'static/src/js/*.js' -- npm run build:js",
-    "watch:all": "parallelshell 'npm run watch:css' 'npm run watch:js'",
     "watch:browser": "browser-sync start --proxy 'http://technian.local' --files '**/*'",
+    "watch:all": "parallelshell 'npm run watch:css' 'npm run watch:js' 'npm run watch:browser'",
     "postinstall": "mkdir -p static/dist/js && mkdir -p static/dist/css && mkdir -p static/dist/img && mkdir -p static/src/scss && mkdir -p static/src/js && mkdir -p static/src/img && touch static/src/scss/main.scss && touch static/src/js/app.js && npm run watch:all"
   },
   "dependencies": {
-    "bootstrap": "^4.5.0"
+    "bootstrap": "^4.5.0",
+    "lazysizes": "^5.2.2"
   }
 }

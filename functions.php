@@ -153,6 +153,7 @@ function technian_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
+	wp_enqueue_script( 'technian-lazysizes', get_template_directory_uri() . '/node_modules/lazysizes/lazysizes.min.js', array('jquery'), _S_VERSION, true );
 	wp_enqueue_script( 'technian-app', get_template_directory_uri() . '/static/dist/js/app.min.js', array('jquery'), _S_VERSION, true );
 }
 add_action( 'wp_enqueue_scripts', 'technian_scripts' );

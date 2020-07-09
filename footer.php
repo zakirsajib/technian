@@ -19,11 +19,6 @@
 					printf( esc_html__( 'Proudly powered by %s', 'technian' ), 'WordPress' );
 					?>
 				</a>
-				<span class="sep"> | </span>
-					<?php
-					/* translators: 1: Theme name, 2: Theme author. */
-					printf( esc_html__( 'Theme: %1$s by %2$s.', 'technian' ), 'technian', '<a href="https://zsresume.netlify.app">Zakir Sajib</a>' );
-					?>
 			</div><!-- .site-info -->
 		</footer><!-- #colophon -->
 	</div> <!-- position: relative -->
