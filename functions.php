@@ -51,6 +51,8 @@ if ( ! function_exists( 'technian_setup' ) ) :
 		register_nav_menus(
 			array(
 				'menu-1' => esc_html__( 'Primary', 'technian' ),
+				'menu-2' => esc_html__( 'Secondary', 'technian' ),
+				'menu-3' => esc_html__( 'Third', 'technian' ),
 			)
 		);
 

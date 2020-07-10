@@ -28,6 +28,7 @@ body {
         font-family: PT Serif;
         line-height: 43px;
         color: #1E1C21;
+        margin: 1rem 0;
     }
 
     a {
@@ -316,6 +317,7 @@ body {
         .menu7 {
             display: none;
             position: fixed;
+            top: 0;
             right: 0;
             align-items: center;
             justify-content: center;
@@ -334,6 +336,15 @@ body {
                 transform: scale(0.523);
                 filter: blur(2px);
                 -webkit-filter: blur(2px);
+            }
+            .section-one,
+            .section-two {
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
             }
         }
   }
@@ -613,6 +624,42 @@ body {
     @media screen and (max-width: $break-small) {
       padding: 50px 0 45px;
     }
+    .partners-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 5rem 0 0;
+        img:first-child {
+            margin-bottom: 1rem;
+        }
+    }
+    .technian-details {
+        background-color: #f8f6f5;
+        font-size: calc(0.45296em + 0.35842vw);
+        line-height: 1.5;
+        height: 100%;
+        overflow: hidden;
+        padding: 0.5rem 0.25rem;
+    }
+    .menu-footer-menu-1-container {
+        padding-bottom: 1rem;
+        ul li {
+            display: inline-block;
+            padding: 0 10px 0 0;
+            a {
+                font-size: calc(0.65296em + 0.35842vw);
+            }
+        }
+    }
+    .menu-footer-menu-2-container ul li {
+        display: inline-block;
+        padding: 0 10px 0 0;
+        a {
+            font-size: calc(0.55296em + 0.35842vw);
+        }
+    }
+
 
     .widget__item {
       @media screen and (max-width: $break-small) {
