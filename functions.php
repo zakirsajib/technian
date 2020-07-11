@@ -96,10 +96,10 @@ if ( ! function_exists( 'technian_setup' ) ) :
 		add_theme_support(
 			'custom-logo',
 			array(
-				'height'      => 250,
-				'width'       => 250,
-				'flex-width'  => true,
-				'flex-height' => true,
+				'height'      => 124,
+				'width'       => 106,
+				'flex-width'  => false,
+				'flex-height' => false,
 			)
 		);
 	}
@@ -149,7 +149,8 @@ function technian_scripts() {
 	wp_style_add_data( 'technian-style', 'rtl', 'replace' );
 	wp_enqueue_style( 'technian-main', get_template_directory_uri() . '/static/dist/css/main.css');
 
-	wp_enqueue_script( 'technian-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	// No need of this
+	wp_enqueue_script( 'technian-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -174,6 +175,11 @@ require get_template_directory() . '/inc/template-tags.php';
  * Functions which enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
+
+/**
+ * Functions which enhance the theme by custom hooking into WordPress.
+ */
+require get_template_directory() . '/inc/template-hooks.php';
 
 /**
  * Customizer additions.

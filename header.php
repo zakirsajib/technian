@@ -23,106 +23,34 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'technian' ); ?></a>
+
+	<?php do_action( 'technian_before_site' ); ?>
 
 	<header id="masthead" class="site-header">
 
-		<div class="styles__Logo">
-			<a
-				aria-label="Technian logo - click to navigate back to the home page"
-				href="<?php echo esc_url( home_url( '/' ) ); ?>"
-				rel="home"
-			>
-				<img
-					src="<?php echo get_template_directory_uri();?>/img/logo.svg"
-					alt=""
-					width="124"
-					height="106"
-				>
-			</a>
-		</div>
+		<?php
+		/**
+		 * Functions hooked into technian_header action
+		 *
+		 * @hooked technian_logo                    - 10
+		 * @hooked technian_site_branding           - 20
+		 * @hooked technian_naviation               - 30
+		 */
 
+		do_action( 'technian_header' ); ?>
 
-		<button
-			id="navToggle"
-			aria-label="menu toggle"
-			aria-haspopup="true"
-			aria-expanded="false"
-			aria-controls="navMenu"
-			tabindex="0"
-			class="header-button">
-				<div class="logo">We are Technian</div>
-				<svg viewBox="0 0 24 11" class="styles__Burger"><g fill="currentColor" stroke="currentColor"><path d="M0,16 L24,16 L24,17 L0,17 L0,16 Z"></path><path d="M0,0 L24,0 L24,1 L0,1 L0,0 Z"></path><path d="M0,8 L24,8 L24,9 L0,9 L0,8 Z"></path></g></svg>
-		</button>
-
-		<nav id="site-navigation" class="main-navigation styles__Nav">
-			<?php
-				wp_nav_menu(
-					array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-					)
-				);
-			?>
-			<div class="technian-menu-location">
-				<address>
-					Sales Queries<br />
-					<a class="hover-color" href="tel:+97144561122">+91 41 456 1122</a><br /><br />
-					HR Related Queries<br />
-					<a class="hover-color" href="tel:+97144561122">+91 43 456 1122</a>
-				</address>
-			</div>
-		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
+
 	<div class="menu-expand">
-		<div class="menu1">
-			<img
-				class="lazyload"
-				data-src="<?php echo get_template_directory_uri();?>/img/menu_agency.jpg"
-				alt="capabilities"
-			>
-		</div>
-		<div class="menu2">
-			<img
-				class="lazyload"
-				data-src="<?php echo get_template_directory_uri();?>/img/menu_work.jpg"
-				alt="About us"
-			>
-		</div>
-		<div class="menu3">
-			<img
-				class="lazyload"
-				data-src="<?php echo get_template_directory_uri();?>/img/menu_careers.jpg"
-				alt="Work"
-			>
-		</div>
-		<div class="menu4">
-			<img
-			 	class="lazyload"
-				data-src="<?php echo get_template_directory_uri();?>/img/menu_connect.jpg"
-				alt="Resource"
-			>
-		</div>
-		<div class="menu5">
-			<img
-				class="lazyload"
-				data-src="<?php echo get_template_directory_uri();?>/img/menu_services.jpg"
-				alt="Award"
-			>
-		</div>
-		<div class="menu6">
-			<img
-				class="lazyload"
-				data-src="<?php echo get_template_directory_uri();?>/img/menu_connect.jpg"
-				alt="Blog"
-			>
-		</div>
-		<div class="menu7">
-			<img
-				class="lazyload"
-				data-src="<?php echo get_template_directory_uri();?>/img/menu_work.jpg" 
-				alt="Reach Us"
-			>
-		</div>
+
+		<?php
+		/**
+		 * Functions hooked into technian menu hover action
+		 *
+		 * @hooked technian_menu_hover               - 32
+		 */
+		do_action( 'technian_menu' ); ?>
+
 	</div>
+
 	<div class="contents">
