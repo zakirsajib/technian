@@ -330,11 +330,15 @@ if ( ! function_exists( 'technian_footer_contact_details' ) ) {
 	 */
 	function technian_footer_contact_details() { ?>
 		<div class="col-6">
-			<h4>Contact Number</h4>
-			Sales Queries<br />
-			<a href="tel:+9999920599">9999920599</a><br />
-			HR Related<br />
-			<a href="tel:+9714450124-4013999">0124-4013999</a>
+			<?php if ( is_active_sidebar( 'footer-sidebar-1' ) ) : ?>
+        		<?php dynamic_sidebar( 'footer-sidebar-1' ); ?>
+    		<?php else : ?>
+				<h4>Contact Number</h4>
+				Sales Queries<br />
+				<a href="tel:+9999920599">9999920599</a><br />
+				HR Related<br />
+				<a href="tel:+9714450124-4013999">0124-4013999</a>
+    		<?php endif; ?>
 		</div>
 	<?php
 	}
@@ -349,16 +353,20 @@ if ( ! function_exists( 'technian_footer_partner_logos' ) ) {
 	function technian_footer_partner_logos() { ?>
 		<div class="col-4">
 			<div class="partners-logo">
-				<img
-					class="lazyload"
-					data-src="<?php echo get_template_directory_uri();?>/img/Microsoft-Partner.png"
-					alt="Microsoft Partner"
-				>
-				<img
-					class="lazyload"
-					data-src="<?php echo get_template_directory_uri();?>/img/google-partners.png"
-					alt="Google Partner"
-				>
+				<?php if ( is_active_sidebar( 'footer-sidebar-2' ) ) : ?>
+	        		<?php dynamic_sidebar( 'footer-sidebar-2' ); ?>
+	    		<?php else : ?>
+					<img
+						class="lazyload"
+						data-src="<?php echo get_template_directory_uri();?>/img/Microsoft-Partner.png"
+						alt="Microsoft Partner"
+					>
+					<img
+						class="lazyload"
+						data-src="<?php echo get_template_directory_uri();?>/img/google-partners.png"
+						alt="Google Partner"
+					>
+	    		<?php endif; ?>
 			</div>
 		</div>
 	<?php
@@ -372,7 +380,9 @@ if ( ! function_exists( 'technian_footer_social_medias' ) ) {
 	 * @return void
 	 */
 	function technian_footer_social_medias() { ?>
-		<h4>Social Links</h4>
+		<?php if ( is_active_sidebar( 'footer-sidebar-3' ) ) : ?>
+			<?php dynamic_sidebar( 'footer-sidebar-3' ); ?>
+		<?php endif; ?>
 	<?php
 	}
 }
@@ -385,22 +395,29 @@ if ( ! function_exists( 'technian_address' ) ) {
 	 * @return void
 	 */
 	function technian_address() { ?>
-		<h4>Address</h4>
-		<div class="technian-details">
-			<div class="col-4">
-				Unit 549-550 5th Floor, Tower B2, Spaze<br>
-				I-Tech Park, Sohana Road, Sector 49<br>
-				Gurgaon, Haryana, 122018, India
+		<?php if ( is_active_sidebar( 'footer-sidebar-4' ) ) : ?>
+			<h4>Address</h4>
+			<div class="technian-details">
+				<?php dynamic_sidebar( 'footer-sidebar-4' ); ?>
 			</div>
-			<div class="col-4">
-				E-24, Basement, Lajpat Nagar - III <br>
-				Delhi, Delhi, 110024, India
+		<?php else: ?>
+			<h4>Address</h4>
+			<div class="technian-details">
+				<div class="col-4">
+					Unit 549-550 5th Floor, Tower B2, Spaze<br>
+					I-Tech Park, Sohana Road, Sector 49<br>
+					Gurgaon, Haryana, 122018, India
+				</div>
+				<div class="col-4">
+					E-24, Basement, Lajpat Nagar - III <br>
+					Delhi, Delhi, 110024, India
+				</div>
+				<div class="col-4">
+					G4, Sector 3, Noida, Uttar Pradesh<br>
+					201301, India
+				</div>
 			</div>
-			<div class="col-4">
-				G4, Sector 3, Noida, Uttar Pradesh<br>
-				201301, India
-			</div>
-		</div>
+		<?php endif; ?>
 	<?php
 	}
 }
@@ -413,14 +430,16 @@ if ( ! function_exists( 'technian_footer_menu_one' ) ) {
 	 * @return void
 	 */
 	function technian_footer_menu_one() {?>
-		<h3>Quick Links</h3>
-		<?php
-		wp_nav_menu(
-			array(
-			'theme_location' => 'menu-2',
-			'menu_id'        => 'footer-menu-1',
-			)
-		);
+		<?php if ( is_active_sidebar( 'footer-sidebar-5' ) ) :
+			dynamic_sidebar( 'footer-sidebar-5' );
+		else:
+			wp_nav_menu(
+				array(
+				'theme_location' => 'menu-2',
+				'menu_id'        => 'footer-menu-1',
+				)
+			);
+		endif;
 	}
 }
 
@@ -432,11 +451,15 @@ if ( ! function_exists( 'technian_footer_menu_two' ) ) {
 	 * @return void
 	 */
 	function technian_footer_menu_two() {
-		wp_nav_menu(
-			array(
-			'theme_location' => 'menu-3',
-			'menu_id'        => 'footer-menu-2',
-			)
-		);
+		if ( is_active_sidebar( 'footer-sidebar-6' ) ) :
+			dynamic_sidebar( 'footer-sidebar-6' );
+		else:
+			wp_nav_menu(
+				array(
+				'theme_location' => 'menu-3',
+				'menu_id'        => 'footer-menu-2',
+				)
+			);
+		endif;
 	}
 }

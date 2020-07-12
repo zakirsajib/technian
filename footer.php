@@ -15,11 +15,32 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-4">
-						<?php do_action('technian_footer_contact');?>
+						<?php
+						/**
+						 * Functions hooked into technian_footer_contact action
+						 *
+						 * @hooked technian_footer_contact_details         - 10
+						 * @hooked technian_footer_partner_logos           - 20
+						 * @hooked technian_footer_social_medias           - 30
+						 */
+						do_action('technian_footer_contact');?>
 					</div>
 					<div class="col-7">
-						<?php do_action('technian_footer_address');?>
-						<?php do_action('technian_footer_menu');?>
+						<?php
+						/**
+						 * Functions hooked into technian_address action
+						 *
+						 * @hooked technian_address                    - 32
+						 */
+						do_action('technian_footer_address');?>
+						<?php
+						/**
+						 * Functions hooked into technian_footer_menu action
+						 *
+						 * @hooked technian_footer_menu_one           - 34
+						 * @hooked technian_footer_menu_two           - 36
+						 */
+						do_action('technian_footer_menu');?>
 					</div>
 				</div>
 			</div>

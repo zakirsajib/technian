@@ -129,13 +129,68 @@ add_action( 'after_setup_theme', 'technian_content_width', 0 );
 function technian_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'technian' ),
-			'id'            => 'sidebar-1',
+			'name'          => esc_html__( 'Footer - Contact', 'technian' ),
+			'id'            => 'footer-sidebar-1',
 			'description'   => esc_html__( 'Add widgets here.', 'technian' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+			'before_title'  => '<h4 class="widget-title">',
+			'after_title'   => '</h4>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer - Partner Logos', 'technian' ),
+			'id'            => 'footer-sidebar-2',
+			'description'   => esc_html__( 'Add widgets here.', 'technian' ),
+			'before_widget' => '',
+			'after_widget'  => '',
+			'before_title'  => '<h4 class="widget-title">',
+			'after_title'   => '</h4>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer - Social Medias', 'technian' ),
+			'id'            => 'footer-sidebar-3',
+			'description'   => esc_html__( 'Add widgets here.', 'technian' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h4 class="widget-title">',
+			'after_title'   => '</h4>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer - Address', 'technian' ),
+			'id'            => 'footer-sidebar-4',
+			'description'   => esc_html__( 'Add widgets here.', 'technian' ),
+			'before_widget' => '<section id="%1$s" class="col-4 widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h4 class="widget-title">',
+			'after_title'   => '</h4>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer - Menu One', 'technian' ),
+			'id'            => 'footer-sidebar-5',
+			'description'   => esc_html__( 'Add widgets here.', 'technian' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h4 class="widget-title">',
+			'after_title'   => '</h4>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer - Menu Two', 'technian' ),
+			'id'            => 'footer-sidebar-6',
+			'description'   => esc_html__( 'Add widgets here.', 'technian' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h4 class="widget-title">',
+			'after_title'   => '</h4>',
 		)
 	);
 }
