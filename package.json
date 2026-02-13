@@ -17,7 +17,7 @@
     "url": "https://github.com/Automattic/_s/issues"
   },
   "devDependencies": {
-    "@wordpress/scripts": "^9.0.0",
+    "@wordpress/scripts": "^31.4.0",
     "autoprefixer": "latest",
     "dir-archiver": "^1.1.1",
     "eslint": "latest",
